@@ -65,7 +65,7 @@ app.use(express.urlencoded({
 app.use(express.json({
   limit: "15mb"
 }));
-app.get('/download', (req, res) => {
+app.get('/open', (req, res) => {
   try {
     const useragent = req.headers['user-agent'];
     if (useragent.includes('Instagram') && !useragent.includes('iPhone')) {
